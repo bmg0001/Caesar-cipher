@@ -107,29 +107,29 @@ class Crypto{
 		for(int i=0; i<this.Data.length(); i++) {
 			char c = this.Data.charAt(i);
 			if((int)c >= (int)'A' && (int)'Z' >= (int)c) {
-				int tmp = (int)c-(int)'Z';
+				int tmp = (int)c-(int)'A';
 				if(tmp+N < 0) {
 					tmp += 26;
 				}
 				tmp = (tmp+N)%26;
-				tmp += (int)'Z';
+				tmp += (int)'A';
 				Decode = Decode + (char)tmp;
 			}
 			else if((int)c >= (int)'a' && (int)'z' >= (int)c) {
-				int tmp = (int)c-(int)'z';
+				int tmp = (int)c-(int)'a';
 				if(tmp+N < 0) {
 					tmp += 26;
 				}
 				tmp = (tmp+N)%26;
-				tmp += (int)'z';
+				tmp += (int)'a';
 				Decode = Decode + (char)tmp;
 			}else if((int)c >= (int)'0' && (int)'9' >= (int)c) {
-				int tmp = (int)c-'9';
+				int tmp = (int)c-'0';
 				if(tmp+N < 0) {
 					tmp += 10;
 				}
 				tmp = (tmp+N)%10;
-				tmp += (int)'9';
+				tmp += (int)'0';
 				Decode = Decode + (char)tmp;
 			}else {
 				Decode = Decode + (char)c;
